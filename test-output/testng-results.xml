@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T18:36:10 IST" name="Master Suite" finished-at="2025-07-25T18:36:19 IST" duration-ms="9991">
+  <suite started-at="2025-08-18T19:47:11 IST" name="Master Suite" finished-at="2025-08-18T19:47:20 IST" duration-ms="8792">
     <groups>
     </groups>
-    <test started-at="2025-07-25T18:36:10 IST" name="Test" finished-at="2025-07-25T18:36:19 IST" duration-ms="9991">
-      <class name="testCases.TC002_LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC002_LoginTest@4567f35d]" started-at="2025-07-25T18:36:15 IST" name="setup" finished-at="2025-07-25T18:36:17 IST" duration-ms="2016" status="PASS">
+    <test started-at="2025-08-18T19:47:11 IST" name="Test" finished-at="2025-08-18T19:47:20 IST" duration-ms="8792">
+      <class name="testCases.TC003_SearchProduct">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC003_SearchProduct@158da8e]" started-at="2025-08-18T19:47:11 IST" name="setup" finished-at="2025-08-18T19:47:16 IST" duration-ms="4322" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,36 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_login()[pri:0, instance:testCases.TC002_LoginTest@4567f35d]" started-at="2025-07-25T18:36:17 IST" name="verify_login" finished-at="2025-07-25T18:36:19 IST" duration-ms="2144" status="PASS">
+        <test-method signature="verify_search()[pri:0, instance:testCases.TC003_SearchProduct@158da8e]" started-at="2025-08-18T19:47:16 IST" name="verify_search" finished-at="2025-08-18T19:47:19 IST" duration-ms="3428" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_LoginTest@4567f35d]" started-at="2025-07-25T18:36:19 IST" name="tearDown" finished-at="2025-07-25T18:36:19 IST" duration-ms="209" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC002_LoginTest -->
-      <class name="testCases.TC001_AccountRegistrationTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC001_AccountRegistrationTest@47af7f3d]" started-at="2025-07-25T18:36:10 IST" name="setup" finished-at="2025-07-25T18:36:13 IST" duration-ms="3131" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verify_account_registration()[pri:0, instance:testCases.TC001_AccountRegistrationTest@47af7f3d]" started-at="2025-07-25T18:36:13 IST" name="verify_account_registration" finished-at="2025-07-25T18:36:15 IST" duration-ms="1957" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_account_registration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_AccountRegistrationTest@47af7f3d]" started-at="2025-07-25T18:36:15 IST" name="tearDown" finished-at="2025-07-25T18:36:15 IST" duration-ms="230" status="PASS">
+        </test-method> <!-- verify_search -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC003_SearchProduct@158da8e]" started-at="2025-08-18T19:47:19 IST" name="tearDown" finished-at="2025-08-18T19:47:20 IST" duration-ms="417" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC001_AccountRegistrationTest -->
+      </class> <!-- testCases.TC003_SearchProduct -->
     </test> <!-- Test -->
   </suite> <!-- Master Suite -->
 </testng-results>

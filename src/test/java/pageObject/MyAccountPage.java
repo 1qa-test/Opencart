@@ -18,6 +18,7 @@ public class MyAccountPage extends BasePage{
 	WebElement lnkLogout;
 	
 	
+	
 	public boolean isMyAccountPageExists()
 	{
 		try
