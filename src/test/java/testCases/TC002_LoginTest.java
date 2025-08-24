@@ -12,6 +12,10 @@ public class TC002_LoginTest extends BaseClass{
 	@Test
 	public void verify_login()
 	{
+		logger.info("****** Starting TC_002_LoginTest *****");
+		
+		try
+		{
 		//Home
 		HomePage hp=new HomePage(driver);
 		hp.clickMyAccount();
@@ -28,8 +32,13 @@ public class TC002_LoginTest extends BaseClass{
 		Boolean targetpage=acc_page.isMyAccountPageExists();
 		
 		Assert.assertTrue(targetpage);
-		
-		acc_page.clickLogout();	
+		}
+		catch(Exception e)
+		{
+			Assert.fail();
+		}
+		logger.info("****** Finished TC_002_LoginTest *****");
+			
 	}
 
 }

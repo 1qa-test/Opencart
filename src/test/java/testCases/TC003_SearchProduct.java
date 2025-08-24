@@ -14,6 +14,10 @@ public class TC003_SearchProduct extends BaseClass{
 	@Test
 	public void verify_search()
 	{
+		logger.info("****** Starting TC003_SearchProduct *****");
+		
+		try
+		{
 		//Home
 		HomePage hp=new HomePage(driver);
 		hp.clickMyAccount();
@@ -29,10 +33,15 @@ public class TC003_SearchProduct extends BaseClass{
 		SearchProductPage spg=new SearchProductPage(driver);
 		spg.setProductName(p.getProperty("productname"));
 		spg.clickSearch();
-		Boolean targetproduct=spg.isProductExist();
+		boolean targetproduct=spg.isProductExist();
 		
 		Assert.assertTrue(targetproduct);
-		
+		}
+		catch(Exception e)
+		{
+			Assert.fail();
+		}
+		logger.info("****** Finished TC003_SearchProduct *****");
 		
 		
 		
