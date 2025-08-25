@@ -20,6 +20,8 @@ public class HomePage extends BasePage{
 	@FindBy(linkText = "Login")   
 	WebElement linkLogin;
 
+	@FindBy(xpath="//ul[@class=\"list-inline\"]//li[4]")
+	WebElement btnShoppingCart;
 
 	public void clickMyAccount()
 	{
@@ -34,6 +36,11 @@ public class HomePage extends BasePage{
 	public void clickLogin()
 	{
 		linkLogin.click();
+	}
+	
+	public void clickShoppingCart()
+	{
+		btnShoppingCart.click();
 	}
 	
 

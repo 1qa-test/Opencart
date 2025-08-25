@@ -21,6 +21,9 @@ public class SearchProductPage extends BasePage{
 	@FindBy(xpath="//a[normalize-space()='iPhone']")
 	WebElement productName;
 	
+	@FindBy(xpath="//div[@class='button-group']//button[1]")
+	WebElement btnAddToCart;
+	
 	public void setProductName(String productname)
 	{
 		txtSearchProduct.sendKeys(productname);
@@ -42,5 +45,9 @@ public class SearchProductPage extends BasePage{
 			return false;
 		}
 	}
+	
+	public void clickAddToCart()
+	{
+		btnAddToCart.click();	}
 
 }
