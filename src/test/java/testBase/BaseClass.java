@@ -9,6 +9,8 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -25,14 +27,18 @@ public class BaseClass {
 	
 	public WebDriver driver;
 	public Properties p;
+	public Logger logger;
 	
-	@BeforeClass
+	@BeforeClass(groups= {"Sanity","Regression","Master"})
 	@Parameters("browser")
 	public void setup(String br) throws IOException
 	{
+		//Loading config.properties file
 		FileReader file=new FileReader("./src//test//resources//config.properties");
 		p=new Properties();
 		p.load(file);
+		
+		logger=LogManager.getLogger(this.getClass());
 		
 		if(p.getProperty("execution_env").equalsIgnoreCase("local"))
 		{
@@ -45,6 +51,8 @@ public class BaseClass {
 			}
 		}
 		
+		
+		
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
@@ -55,7 +63,7 @@ public class BaseClass {
 	
 	
 	
-	@AfterClass
+	@AfterClass(groups= {"Sanity","Regression","Master"})
 	public void tearDown()
 	{
 		driver.quit();
@@ -81,7 +89,7 @@ public class BaseClass {
 		return (generatedstring+"@"+generatednumber);
 	}
 	
-	public String captureScreenshot(String tname)
+	public String captureScreenshot(String tname) throws IOException
 	{
 		String timestamp=new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new Date());
 		

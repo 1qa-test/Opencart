@@ -9,9 +9,12 @@ import testBase.BaseClass;
 
 public class TC001_AccountRegistrationTest extends BaseClass{
 	
-	@Test
+	@Test(groups={"Regression","Master"})
 	public void verify_account_registration()
 	{
+		logger.info("***** Starting TC001_AccountRegistrationTest  ****");
+		logger.debug("This is a debug log message");
+		try {
 		HomePage hp=new HomePage(driver);
 		hp.clickMyAccount();
 		hp.clickRegister();
@@ -34,6 +37,17 @@ public class TC001_AccountRegistrationTest extends BaseClass{
 		String confmsg = reg_page.getConfirmationMsg();
 		Assert.assertEquals(confmsg, "Your Account Has Been Created!", "Confirmation message mismatch");
 
+		logger.info("Test passed");
+		}
+		catch (Exception e)
+		{
+			logger.error("Test failed: " + e.getMessage());
+			Assert.fail("Test failed: " + e.getMessage());
+		} 
+		finally 
+		{
+		logger.info("***** Finished TC001_AccountRegistrationTest *****");
+		}
 	}
 
 }
